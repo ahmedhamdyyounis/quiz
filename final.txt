@@ -1,0 +1,40 @@
+import React from 'react'
+
+export default function Final({score, total, correct, wrong} = props) {
+    return (
+        <div className='result'>
+            <h5 id='page-name'>Results</h5>
+            <header>
+            <h2>{score}<span> /</span>{total}</h2>
+            <div className='circle-border'>
+                 <div className=''></div>
+            </div>
+            </header>
+            
+            <main>
+                <ul className='result-list'>
+                    <li>
+                        <i className='dot orange'></i>
+                        <p>Total Questions</p>
+                        <span className='grade'>{total}</span>
+                    </li>
+                    <li>
+                        <i className='dot blue'></i>
+                        <p>Total Score: </p>
+                        <span className='grade'>{score}</span>
+                    </li>
+                    <li>
+                        <i className='dot green'></i>
+                        <p>Correct Answers:</p>
+                        <span className='grade'>{correct}</span>
+                    </li>
+                    <li>
+                        <i className='dot red'></i>
+                        <p>Wrong Answers:</p>
+                        <span className='grade'> {wrong}</span>
+                    </li>
+                </ul>
+            </main>
+        </div>
+    )
+}
